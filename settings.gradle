@@ -1,0 +1,4 @@
+rootProject.name='UniqueString'
+include ':sample'
+include ':annotation'
+include ':processor'
