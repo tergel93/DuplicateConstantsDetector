@@ -1,9 +1,9 @@
-# HowTo
+# Guide
 Add Annotation **UniqueString** to the Java class that contains a bunch of **static final String**s
 
 ```java
     @UniqueString
-    public static class SharedPrefsFileName {
+    public static class SharedPrefFileNames {
       public static final String USER_INFO = "user_info";
       public static final String DATA_CACHE = "data_cache";
       @Skip

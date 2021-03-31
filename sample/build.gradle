@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 29
@@ -25,5 +26,10 @@ android {
 
 dependencies {
     implementation project(path: ':annotation')
-    annotationProcessor project(path: ':processor')
+    debugAnnotationProcessor project(path: ':processor')
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
