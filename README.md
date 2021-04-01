@@ -1,5 +1,5 @@
 # Guide
-Add Annotation **UniqueString** to the Java class that contains a bunch of **static final String**s
+Add Annotation **UniqueString** to the Java class you wanna check.
 
 ```java
     @UniqueString
