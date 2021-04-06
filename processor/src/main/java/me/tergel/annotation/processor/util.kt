@@ -1,6 +1,7 @@
 package me.tergel.annotation.processor
 
 import me.tergel.annotation.Skip
+import java.util.*
 import javax.lang.model.element.Element
 
 private const val TAG = "[UniqueString]:"
@@ -14,6 +15,12 @@ fun Element.isNotAnnotatedWithSkip(): Boolean {
 
 fun <T : Annotation> Element?.isAnnotatedWith(
         annotationCls: Class<T>): Boolean {
-    return this?.getAnnotation(annotationCls) != null
+    val result = this?.getAnnotation(annotationCls) != null
+    this?.let {
+        log("${it.simpleName} isAnnotatedWith @${annotationCls.simpleName}" +
+                ": ${result.toString().toUpperCase(Locale.ROOT)}")
+    }
+    return result
+
 }
 
