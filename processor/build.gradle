@@ -6,11 +6,10 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
 
+sourceCompatibility = "8"
+targetCompatibility = "8"
 
-sourceCompatibility = "7"
-targetCompatibility = "7"
 buildscript {
-    ext.kotlin_version = '1.4.32'
     repositories {
         mavenCentral()
     }
